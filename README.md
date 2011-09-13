@@ -84,6 +84,20 @@ function(err, stdout){
   console.log('stdout:', stdout);
 });
 ```
+    
+### composite(args, callback(err, stdout, stderr))
+
+Raw interface to `composite` passing arguments in the array `args`.
+
+Example:
+
+```javascript
+im.composite(['-watermark','30%','-gravity','SouthEast','watermark.png','input.png'], 
+function(err, metadata){
+  if (err) throw err
+  console.log('stdout:', stdout);
+})
+```
 
 ### resize(options, callback(err, stdout, stderr))
 
